@@ -1,16 +1,16 @@
 # D-FLIPDLOP-NEGEDGE
 
-**AIM:**
+## **AIM:**
 
 To implement  D flipflop using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:**
+## **SOFTWARE REQUIRED:**
 
 Quartus prime
 
-**THEORY**
+## **THEORY**
 
-**D Flip-Flop**
+## **D Flip-Flop**
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
 
@@ -26,19 +26,41 @@ Therefore, D flip-flop always Hold the information, which is available on data i
 
 Next state of D flip-flop is always equal to data input, D for every positive transition of the clock signal. Hence, D flip-flops can be used in registers, shift registers and some of the counters.
 
-**Procedure**
+## **Procedure**
 
-/* write all the steps invloved */
+1.	Type the program in Quartus software.
 
-**PROGRAM**
+2.	Compile and run the program.
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+3.	Generate the RTL schematic and save the logic diagram.
 
-**RTL LOGIC FOR FLIPFLOPS**
+4.	Create nodes for inputs and outputs to generate the timing diagram.
 
-
-**TIMING DIGRAMS FOR FLIP FLOPS**
+5.	For different input combinations generate the timing diagram.
 
 
-**RESULTS**
+## **PROGRAM**
+
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+### module d_ff_neg_edge(d,clk,rst,q);
+ ### input d,clk,rst;
+ ### output reg q;
+ ### always@(negedge clk or posedge rst)begin
+  ### if(rst)
+   ### q<=0;//Reset the flip-flop
+  ### else
+   ### q<=d;//D input is passed to Q on the negative clock edge
+  ### end
+### endmodule 
+###  Developed by: Kirutika KR 
+### RegisterNumber: 24001080
+## **RTL LOGIC FOR FLIPFLOPS**
+![exp 8 logic diagram](https://github.com/user-attachments/assets/435f50da-f528-4b58-ae1b-5685fbd7e7de)
+
+
+## **TIMING DIGRAMS FOR FLIP FLOPS**
+![exp 8 wf](https://github.com/user-attachments/assets/48ed1bb7-80e9-449d-a674-f2a598674b81)
+
+
+## **RESULTS**
+Thus the implementation of D flipflop and validating their functionality using their functional tables is verified in Quartus II using verilog programming. 
